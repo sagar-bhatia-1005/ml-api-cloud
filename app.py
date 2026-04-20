@@ -14,8 +14,9 @@ def predict():
     prediction = model.predict([text])[0]
     # Return the result
     return jsonify({
-    'input_text': text,
-    'sentiment_prediction': prediction
+        'input_text': text,
+        'sentiment_prediction': prediction,
+        'model_version': '1.1' # <-- ADD THIS LINE
     })
 if __name__ == '__main__':
 # Listen on all network interfaces (0.0.0.0) so Docker can expose it
